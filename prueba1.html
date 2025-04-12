@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiple Choice Practice</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .question {
+            margin-bottom: 20px;
+        }
+        .options button {
+            margin: 5px 0;
+        }
+        .result {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Multiple Choice Practice</h1>
+    <div id="quiz">
+        <div class="question">
+            <p>What is the capital of Costa Rica?</p>
+            <div class="options">
+                <button onclick="checkAnswer('A')">A) San José</button>
+                <button onclick="checkAnswer('B')">B) Alajuela</button>
+                <button onclick="checkAnswer('C')">C) Heredia</button>
+                <button onclick="checkAnswer('D')">D) Cartago</button>
+            </div>
+        </div>
+    </div>
+    <div id="result" class="result"></div>
+
+    <script>
+        function checkAnswer(selected) {
+            const correctAnswer = 'A';
+            const result = document.getElementById('result');
+            
+            if (selected === correctAnswer) {
+                result.textContent = "Correct! San José is the capital of Costa Rica.";
+                result.style.color = "green";
+            } else {
+                result.textContent = "Incorrect! The correct answer is A) San José.";
+                result.style.color = "red";
+            }
+        }
+    </script>
+</body>
+</html>
